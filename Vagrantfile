@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
 	config.vm.network "private_network", ip: "192.168.33.10"
 	config.vm.provision "shell", inline: <<-SHELL
 		sudo apt-get update
-		sudo apt-get install -y apache2
+		sudo apt-get install -y apache2 git
 		echo "<h1>Hello from Vagrant - Also my name is Spongebob</h1>" | sudo tee /var/www/html/index.html
 	SHELL
 end
